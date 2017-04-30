@@ -21,10 +21,12 @@ export class FilterComponent implements OnInit {
     // Settings configuration
   mySettings: IMultiSelectSettings = {
       enableSearch: true,
-      checkedStyle: 'fontawesome',
+      checkedStyle: 'checkboxes',
       buttonClasses: 'btn btn-default btn-block',
-      dynamicTitleMaxItems: 3,
-      displayAllSelectedText: true
+      dynamicTitleMaxItems: 1,
+      displayAllSelectedText: true,
+      selectionLimit: 3,
+      autoUnselect: false
   };
 
   // Text configuration
