@@ -1,1 +1,56 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+  font-family: serif !important;
+}
+.mainRideSearchContents{
+  border: 1px solid blue;
+}
+.searchRegulationParent{
+  color: white;
+  background-color: rgb(61,133,198);
+  font-size: 24px;
+  align-items: center;
+  display: flex;
+  align-content: center;
+  height: 20px;
+  padding: 20px
+}
+.rideHeader{
+  padding: 10px;
+  color: rgb(61, 133, 198);
+}
+.filterImage{
+  display: flex;
+  height: 40px;
+  width: 40px;
+  float: right;
+}
+.mainSearchInputContents{
+  padding: 5px
+}
+.searchInputParent{
+  width: 95%;
+}
+.searchInput{
+  border-radius: 5px;
+  border-width: 1px;
+  width: 100%;
+  border-color: rgb(61, 133, 198);
+  font-size: 20px;
+  padding: 10px;
+  height:40px
+}
+.centerBlock {
+  display: table;
+  margin: auto;
+}
+.ng2-auto-complete{
+  font-size: 20px;
+  position: absolute;
+}
+.dropdown-menu{
+  width : 100%
+}
+.dropdown-toggle{
+  width: 100%
+}
