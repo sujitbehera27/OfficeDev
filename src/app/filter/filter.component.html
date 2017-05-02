@@ -1,0 +1,10 @@
+<div style="padding:5px" class="centerBlock">
+  <div>Select Agencies</div>
+  <div class='overlay centerBlock' style="width:100%">
+    <ss-multiselect-dropdown [options]="myOptions" [texts]="myTexts" [settings]="mySettings" [(ngModel)]="optionsModel" (ngModelChange)="onChange($event)"></ss-multiselect-dropdown>
+  </div>
+  <div class="centerBlock">
+    <button class="btn btn-primary">Save Filters</button>
+    <button class="btn btn-danger">Reset Filters</button>
+  </div>
+</div>
