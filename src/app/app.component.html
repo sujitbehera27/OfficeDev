@@ -1,14 +1,26 @@
 <h1>
-  <p> {{title}} </p>
-  <div class='overlay'>
-    <h3>Select any section</h3>
-    <input style="height:40px" ng2-auto-complete [(ngModel)]="sectionInfo" [source]="mySource.sections"
-    [no-match-found-text] (ngModelChange) = "sectionSelected(sectionInfo)"/>{{sectionInfo}}
-    <h3>Select any Sub Section</h3>
-    <input style="height:40px" auto-complete [(ngModel)]="subSectionInfoCaptured" [source] = "this.subSectionInfo"
-    [no-match-found-text]/>
-    <h3>Select any Sub Sub Section</h3>
-    <input style="height:40px" auto-complete [(ngModel)]="subSubSectionInfo" [source]="subSubSource.sections"
-    [no-match-found-text]/>
+  <h2 class="rideHeader"> {{header}} </h2>
+  <div class="mainRideSearchContents" style="border-color:#ceced6">
+    <div class="searchRegulationParent row">
+      <div class="col-md-11" style="width:80%">Search Regulation</div>
+      <div>
+        <img (click) = "filterClick()" class="filterImage colmd-1" src="../src/img/filter icon_big.png"/>
+      </div>
+    </div>
+    <div class="mainSearchInputContents row">
+      
+       <div [@filterPane]="state" style="width:100%;">
+         <h4 class="rideHeader" style="margin-left:2.5%;">Select Agencies</h4>
+      <app-filter></app-filter>
+    </div>
+      <div class="searchInputParent centerBlock">
+        <!--<input class="searchInput" ng2-auto-complete [(ngModel)]="sectionInfo" [source]="mySource.sections"
+        [no-match-found-text] [list-formatter]="testCss" placeholder="Labelling Requirements"/>-->
+         <h4 class="rideHeader"> Search : </h4>
+     <input #searchBox class="searchInput" (keyup)="search(searchBox.value)" style="width:95%;margin:2%;" placeholder="Search Text...."/> 
+       
+      </div>
+    </div>
+   
   </div>
 </h1>
